@@ -12,8 +12,9 @@ def verify(index):
     else:
         print("Target not found!")
         
+        
 user_list = input("Please enter some number: ")
 a_list = user_list.split()
 
-iterator = linear_search(a_list,5)
+iterator = linear_search(a_list,6)
 verify(iterator)
