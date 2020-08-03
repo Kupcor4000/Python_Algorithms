@@ -3,11 +3,11 @@ def linear_search(list_of_arguments,target):
     for i in range(len(list_of_arguments)):
         if int(list_of_arguments[i]) == target:
             print("We find target number {} in {} atemps!".format(target,step))
-            break;
+            return i
         step += 1
         if step == len(list_of_arguments)+1:
             print("Nie ma takiej liczby w zbiorze!")
-            break;
+            return None
         
         
 user_list = input("Please enter some number: ")
