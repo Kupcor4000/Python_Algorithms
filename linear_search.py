@@ -5,9 +5,8 @@ def linear_search(list_of_arguments,target):
             print("We find target number {} in {} atemps!".format(target,step))
             return i
         step += 1
-        if step == len(list_of_arguments)+1:
-            print("Nie ma takiej liczby w zbiorze!")
-            return None
+    print("Nie ma takiej liczby w zbiorze!")
+    return None
         
         
 user_list = input("Please enter some number: ")
