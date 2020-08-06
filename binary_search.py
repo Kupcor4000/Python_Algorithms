@@ -3,13 +3,19 @@ import math
 
 
 def binary_search(list_of_arguments,target):
+    ##pierwszy wyraz w liscie
     ogr_1 = 0
+    ##drugi wyraz w liscie
     ogr_2 = len(list_of_arguments)
+    #mid point, round mozna zastapic //''// - zaokraglenie nastepuje do mniejszej liczby!
     index = int(round((ogr_2+ogr_1)/2))
     step = 1;
-    while True:
+    # dzieki temu warunkowi program zakonczy sie jesli nie bedzie liczby w zbiorze, gdybysmy po prostu uzyli warunku while True to petla dzialalaby
+    #w nieskonczonosc
+    while ogr_1 < ogr_2:
         print("ogr_1: {} ogr_2: {}".format(ogr_1,ogr_2))
         print("Przejsc: {}, aktualny index: {}, na ktorym jest wartosc: {}".format(step,index-1,list_of_arguments[index-1]))
+        #warunki wyjscia oraz zmienania wartosci ograniczen
         if int(list_of_arguments[index-1]) == target:
             return index - 1
         elif int(list_of_arguments[index-1]) > target:
@@ -23,14 +29,16 @@ def binary_search(list_of_arguments,target):
         step += 1
         
 
+#funkcja pokazujaca ostateczny wynik
 def verify(wartosc):
     if wartosc is not None:
         print("Szukana liczba znajduje sie na pozycji: {}".format(wartosc))
     else:
         print("Szukana liczba nie znajduje sie w zborze")
         
-lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
-wynik = binary_search(lista,3)
+        
+lista = [1,22,33,120,543,2332,22033]
+wynik = binary_search(lista,2332)
 verify(wynik)
 
     
