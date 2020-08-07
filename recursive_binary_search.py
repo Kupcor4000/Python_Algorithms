@@ -22,6 +22,6 @@ def veryfi(result):
     
     
     
-numbers = [1,2,3,4,5,6,7,8]
-result = recursive_binary_search(numbers,9)
+numbers = [1,2,3]
+result = recursive_binary_search(numbers,4)
 veryfi(result)

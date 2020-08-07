@@ -26,7 +26,6 @@ def verify(wartosc):
         print("Szukana liczba nie znajduje sie w zbiorze")
 
 #booble sort
-#TODO dodać funkcje która sortuje liste podaną przez uzytkownika
 def sorting(a_list):
         i = True
         while i:
