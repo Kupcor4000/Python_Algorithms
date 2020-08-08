@@ -2,6 +2,8 @@
 #O(n^2) - time
 
 import random
+import datetime 
+import time
 
 def selection_sort(list,n):
     j = 0
@@ -28,7 +30,12 @@ def generator_of_random_numbers(amount):
     print("The list of random numbers: {}".format(list_for_numbers))
     return list_for_numbers
 
+
+start = time.clock()
 amount_user = int(input("How many random numbers do you want to habe? "))
 lista = generator_of_random_numbers(amount_user)
 print("")
 print(selection_sort(lista,len(lista)))
+end = time.clock()
+total = end - start
+print("{0:02f}s".format(total))
