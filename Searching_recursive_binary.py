@@ -1,5 +1,7 @@
 #Warunke I - lista musi być posortowana
 #Funkcja będzie zwracała True jeśli element istnieje lub False jeśli nie
+#Space Complexity O(log n)
+
 def recursive_binary_search(list,target):
     #jeśli lista jest pusta to zwrocimy falsz
     if len(list) == 0:
